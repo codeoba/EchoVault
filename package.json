@@ -1,25 +1,26 @@
 {
-    "name": "echovault",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "release": "semantic-release",
-        "predev": "node scripts/download-rclone.mjs",
-        "dev": "pnpm --filter echovault-web dev",
-        "build": "pnpm --filter echovault-web build",
-        "setup": "node scripts/setup-dev.mjs && pnpm build",
-        "reset": "node scripts/reset-app.mjs",
-        "tauri": "cargo tauri"
-    },
-    "packageManager": "pnpm@9.15.3",
-    "devDependencies": {
-        "@semantic-release/changelog": "^6.0.3",
-        "@semantic-release/commit-analyzer": "^13.0.1",
-        "@semantic-release/git": "^10.0.1",
-        "@semantic-release/github": "^12.0.2",
-        "@semantic-release/release-notes-generator": "^14.1.0",
-        "semantic-release": "^25.0.2",
-        "semantic-release-cargo": "^2.4.2",
-        "unzipper": "^0.12.3"
-    }
+  "name": "echovault",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "release": "semantic-release",
+    "predev": "node scripts/download-rclone.mjs",
+    "dev": "pnpm --filter echovault-web dev",
+    "build": "pnpm --filter echovault-web build",
+    "setup": "node scripts/setup-dev.mjs && pnpm build",
+    "reset": "node scripts/reset-app.mjs",
+    "tauri": "cargo tauri",
+    "preinstall": "node preinstall.js"
+  },
+  "packageManager": "pnpm@9.15.3",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "semantic-release": "^25.0.2",
+    "semantic-release-cargo": "^2.4.2",
+    "unzipper": "^0.12.3"
+  }
 }
